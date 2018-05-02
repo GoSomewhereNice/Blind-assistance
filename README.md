@@ -1,2 +1,2 @@
-# Blind-assistance-Raspberry-
+# Blind-assistance
 raspberry pi  
