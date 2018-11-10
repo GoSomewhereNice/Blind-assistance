@@ -1,2 +1,2 @@
 # Blind-assistance
-raspberry pi  
+raspberry pi for blind people.  
