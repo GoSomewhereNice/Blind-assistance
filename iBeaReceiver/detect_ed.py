@@ -64,6 +64,10 @@ def alarm(distance):
         pwm_buzzer.ChangeDutyCycle(50)
 
 try:
+    print 'Start...'
+    for i in range (3):
+        pwm_buzzer.ChangeDutyCycle(50)
+        time.sleep(0.3)
     while True:
         for i in xrange(0,4,1):
             distance=detection_average()
