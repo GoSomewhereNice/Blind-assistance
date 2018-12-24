@@ -31,9 +31,9 @@ while True:
             dis = round(distance(dev.rssi),2)
             if dis<1:
                 os.popen('./stopRecBee.sh detect_ed.py')
-                os.popen('./stopRecBee.sh ble_scan_v4.py')
                 os.popen('./stopRecBee.sh button.py')
                 os.popen('./remoteStop.sh')
+                os.popen('./stopRecBee.sh ble_scan_v4.py')
             break
         else:
             os.system('echo > /dev/null 2>&1')
