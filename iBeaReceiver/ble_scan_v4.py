@@ -19,7 +19,6 @@ def distance(rssi):
     power = (iRssi-59)/(10*2.0)
     return pow(10,power)
 
-doc = open('distance.txt','w')
 while True:
     scanner = Scanner().withDelegate(ScanDelegate())
     devices = scanner.scan(2.0) #time out
@@ -29,7 +28,12 @@ while True:
         if dev.addr == myDev:
             print "Device %s (%s), RSSI=%d dB" % (dev.addr, dev.addrType, dev.rssi)
             print "Distance %s m" % (round(distance(dev.rssi),2))
-            print >> doc, "%s" % (round(distance(dev.rssi),2))
+            dis = round(distance(dev.rssi),2)
+            if dis<1:
+                os.popen('./stopRecBee.sh detect_ed.py')
+                os.popen('./stopRecBee.sh ble_scan_v4.py')
+                os.popen('./stopRecBee.sh button.py')
+                os.popen('./remoteStop.sh')
             break
         else:
             os.system('echo > /dev/null 2>&1')
