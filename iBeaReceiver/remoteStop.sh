@@ -10,6 +10,6 @@ expect {
 expect "]*"
 send "sudo ./Blind-assistance/iBeaSender/stopSdrBee.sh\r"
 expect "]*"
-send "echo Finish...\r"
+send "sudo python ./Blind-assistance/iBeaSender/FinalBee.py\r"
 expect "]*"
 send "exit\r"
