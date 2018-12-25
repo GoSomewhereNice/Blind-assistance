@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NAME=HC-SR501.py
+NAME=FinalBee.py
 echo $NAME
 ID=`ps -ef | grep "$NAME" | grep -v "grep" | awk '{print $2}'`
 echo $ID
