@@ -8,8 +8,10 @@ expect {
 "password:" { send "$passwd\r" }
 }
 expect "]*"
-send "sudo ./Blind-assistance/iBeaSender/stopSdrBee.sh\r"
+send "sudo ./Blind-assistance/iBeaSender/stopSdrBee.sh HC-SR501.py\r"
 expect "]*"
 send "sudo python ./Blind-assistance/iBeaSender/FinalBee.py\r"
+expect "]*"
+send "sudo ./Blind-assistance/iBeaSender/stopSdrBee.sh FinalBee.py\r"
 expect "]*"
 send "exit\r"

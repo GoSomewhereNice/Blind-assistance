@@ -13,6 +13,7 @@ echo_pin=18
 trigger_pin=16
 BUZZER_pin=12
 
+GPIO.setwarnings(False)
 GPIO.setup(trigger_pin, GPIO.OUT,initial=GPIO.LOW)
 GPIO.setup(echo_pin, GPIO.IN)
 GPIO.setup(BUZZER_pin, GPIO.OUT)

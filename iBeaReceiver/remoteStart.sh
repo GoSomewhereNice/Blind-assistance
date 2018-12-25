@@ -10,6 +10,4 @@ expect {
 expect "]*"
 send "sudo python Blind-assistance/iBeaSender/HC-SR501.py > /dev/null &\r"
 expect "]*"
-send "echo Finish...\r"
-expect "]*"
 send "exit\r"
